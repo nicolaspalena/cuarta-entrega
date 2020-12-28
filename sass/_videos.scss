@@ -1,0 +1,41 @@
+.videos__todos {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 10px ;
+        grid-row-gap: 10px;
+        grid-template-areas: 
+        "video1 video2"
+        "video3 video4";
+        
+        li.item1 {
+            grid-area: video1;
+        }
+        
+        li.item2 {
+            grid-area: video2;
+        }
+        
+        li.item3 {
+            grid-area: video3;
+        }
+        
+        li.item4 {
+            grid-area: video4;
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .videos__todos ul{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+            "video1"
+            "video2"
+            "video3"
+            "video4";
+    }
+}

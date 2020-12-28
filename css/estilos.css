@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  padding: 10px 0;
+  background: #cad2d3;
+}
+
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__flex ul {
+  display: flex;
+}
+
+nav {
+  padding: 1em;
+}
+
+body {
+  font-weight: 300;
+  font-size: 110%;
+  font-family: "Montserrat", sans-serif;
+}
+
+header ul li a {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 90%;
+  color: #020122;
+  padding: 1.8em;
+}
+header ul li a:hover {
+  color: white;
+  background-color: #d62828;
+  text-decoration: underline;
+}
+
+.icon {
+  display: none;
+  width: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 75%;
+    height: 100vh;
+    background: #cad2d3;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: left 0.5s;
+    z-index: 1;
+  }
+
+  #menu:target {
+    left: 0;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .close {
+    position: absolute;
+    left: 1.4rem;
+    top: 0.9rem;
+  }
+
+  header ul {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header ul li {
+    margin: 1.5rem 0;
+  }
+
+  header ul li a {
+    font-size: 2rem;
+  }
+
+  header ul li a:hover {
+    color: black;
+    background-color: white;
+    text-decoration: underline black;
+  }
+}
+footer {
+  background-color: #cad2d3;
+  padding: 1rem;
+}
+footer .footer__flex {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer__formulario {
+  padding-top: 1rem;
+}
+footer .footer__formulario p {
+  margin-bottom: 0.5em;
+}
+footer .footer__redesSociales {
+  text-align: center;
+  padding-bottom: 8px;
+  margin-top: 1.8rem;
+}
+footer .footer__redesSociales a {
+  margin: 0.3em;
+}
+footer .footer__redesSociales .iconify {
+  font-size: 2em;
+  color: black;
+}
+footer .footer__redesSociales .iconify:hover {
+  color: #d62828;
+}
+
+article img {
+  margin-bottom: 0.5rem;
+}
+
+.main__articles .contenedor {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.main__articles article {
+  text-align: center;
+  width: 30%;
+  padding: 2rem 0;
+}
+.main__articles img {
+  border-radius: 2.5%;
+  transition: transform 0.3s;
+}
+.main__articles img:hover {
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 768px) {
+  .main__articles .contenedor {
+    flex-direction: column;
+  }
+
+  .main__articles article {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+.videos__todos ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas: "video1 video2" "video3 video4";
+}
+.videos__todos ul li.item1 {
+  grid-area: video1;
+}
+.videos__todos ul li.item2 {
+  grid-area: video2;
+}
+.videos__todos ul li.item3 {
+  grid-area: video3;
+}
+.videos__todos ul li.item4 {
+  grid-area: video4;
+}
+
+@media screen and (max-width: 768px) {
+  .videos__todos ul {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "video1" "video2" "video3" "video4";
+  }
+}
+.albums__music ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-areas: "image1 image2 image3" "image4 image5 image6" "image7 image8 image9" "image10 image11 image12";
+}
+.albums__music ul li.album1 {
+  grid-area: image1;
+}
+.albums__music ul li.album2 {
+  grid-area: image2;
+}
+.albums__music ul li.album3 {
+  grid-area: image3;
+}
+.albums__music ul li.album4 {
+  grid-area: image4;
+}
+.albums__music ul li.album5 {
+  grid-area: image5;
+}
+.albums__music ul li.album6 {
+  grid-area: image6;
+}
+.albums__music ul li.album7 {
+  grid-area: image7;
+}
+.albums__music ul li.album8 {
+  grid-area: image8;
+}
+.albums__music ul li.album9 {
+  grid-area: image9;
+}
+.albums__music ul li.album10 {
+  grid-area: image10;
+}
+.albums__music ul li.album11 {
+  grid-area: image11;
+}
+.albums__music ul li.album12 {
+  grid-area: image12;
+}
+.albums__music ul img {
+  transition: transform 0.3s;
+}
+.albums__music ul img:hover {
+  transform: scale(1.03);
+}
+
+@media screen and (max-width: 500px) {
+  .section_music ul {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: "image1" "image2" "image3" "image4" "image5" "image6" "image7" "image8" "image9" "image10" "image11" "image12";
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .section_music ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "image1 image2" "image3 image4" "image5 image6" "image7 image8" "image9 image10" "image11 image12";
+  }
+}
+.btn-primary {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-color: black;
+  padding: 0.7em 1em;
+  border-radius: 0.3em;
+}
+.btn-primary:hover {
+  background: #d62828;
+  color: white;
+  border-color: #d62828;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section_all {
+  padding: 4rem 0;
+}
+.section_all h2 {
+  margin-bottom: 1rem;
+}
+
+.section_about p {
+  margin: 1rem 0;
+}
+
+header h1 {
+  font-size: 180%;
+  color: #020122;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h1 a {
+  color: black;
+}
+h1 a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 140%;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 120%;
+  font-weight: 600;
+}

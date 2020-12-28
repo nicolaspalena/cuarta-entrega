@@ -1,0 +1,71 @@
+nav {
+    padding: 1em;
+}
+
+body {
+    font-weight: 300;
+    font-size: 110%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header ul li a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 90%;
+    color: rgb(2, 1, 34);
+    padding: 1.80em;
+    
+    &:hover {
+        color: white;
+        background-color: $rojo;
+        text-decoration: underline;
+    }
+}
+
+.icon {
+    display: none;
+    width: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    header nav {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 75%;
+        height: 100vh;
+        background: $celeste; 
+        box-shadow: $sombra;
+        transition: left 0.5s;
+        z-index: 1
+    }
+    #menu:target{
+        left: 0;
+    }
+    .icon{
+        display: block;
+    }
+    .close {
+        position: absolute;
+        left: 1.4rem;
+        top: 0.9rem;
+    }
+    header ul {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header ul li {
+        margin: 1.5rem 0;
+    }
+    header ul li a {
+        font-size: 2rem;
+    }
+    header ul li a:hover {
+        color: black;
+        background-color:  white;
+        text-decoration: underline black;
+    }
+}

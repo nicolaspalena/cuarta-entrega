@@ -1,0 +1,105 @@
+.albums__music {
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 10px ;
+        grid-row-gap: 10px;
+        grid-template-areas: 
+        "image1 image2 image3"
+        "image4 image5 image6"
+        "image7 image8 image9"
+        "image10 image11 image12";
+
+        li.album1 {
+            grid-area: image1;
+        }
+        
+        li.album2 {
+            grid-area: image2;
+        }
+        
+        li.album3 {
+            grid-area: image3;
+        }
+        
+        li.album4 {
+            grid-area: image4;
+        }
+        
+        li.album5 {
+            grid-area: image5;
+        }
+        
+        li.album6 {
+            grid-area: image6;
+        }
+        
+        li.album7 {
+            grid-area: image7;
+        }
+        
+        li.album8 {
+            grid-area: image8;
+        }
+        
+        li.album9 {
+            grid-area: image9;
+        }
+        
+        li.album10 {
+            grid-area: image10;
+        }
+        
+        li.album11 {
+            grid-area: image11;
+        }
+        
+        li.album12 {
+            grid-area: image12;
+        }
+
+        img {
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:500px) {
+.section_music ul{
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas: 
+        "image1"
+        "image2"
+        "image3"
+        "image4"
+        "image5"
+        "image6"
+        "image7"
+        "image8"
+        "image9"
+        "image10"
+        "image11"
+        "image12";
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:768px) {
+    .section_music ul{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "image1 image2"
+            "image3 image4"
+            "image5 image6"
+            "image7 image8"
+            "image9 image10"
+            "image11 image12";
+    }
+}
